@@ -110,14 +110,14 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext iTestContext) {
         if (testRailTestRunId == 0) {
-            createTestRun("TestRail");
+            createTestRun("TestRailTest");
         } else {
             TestRunAdapter testRunAdapter = new TestRunAdapter();
 
             TestRunsAPI testRuns = testRunAdapter.getTestRun(testRailTestRunId);
 
             if (testRuns.isCompleted()) {
-                createTestRun("TestRail");
+                createTestRun("TestRailTest");
             }
         }
     }
