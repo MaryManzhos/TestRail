@@ -20,7 +20,7 @@ public class ProjectTest extends Authorization {
             .radio("Use a single repository for all cases (recommended)")
             .build();
 
-    @TestRail(testCaseID = {6})
+    @TestRail(testCaseID = {1})
     @Test(description = "Create new project")
     public void isNewProjectCreated() {
         projectSteps
@@ -31,7 +31,7 @@ public class ProjectTest extends Authorization {
                 .deleteProjectAPI(newProject);
     }
 
-    @TestRail(testCaseID = {7})
+    @TestRail(testCaseID = {3})
     @Test(description = "Delete project")
     public void isProjectDeleted() {
         projectSteps
@@ -43,7 +43,7 @@ public class ProjectTest extends Authorization {
                 .validateIsProjectNotExisted(newProject);
     }
 
-    @TestRail(testCaseID = {8})
+    @TestRail(testCaseID = {2})
     @Test(description = "Update project")
     public void isProjectUpdated() {
         projectSteps

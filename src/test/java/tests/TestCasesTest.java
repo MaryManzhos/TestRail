@@ -55,7 +55,7 @@ public class TestCasesTest extends Authorization {
                 .createProjectAPI(newProjectAPI);
     }
 
-    @TestRail(testCaseID = {9, 10, 11, 12, 13})
+    @TestRail(testCaseID = {4, 5, 6, 7})
     @Test(description = "Create new test case", dataProvider = "Data fo test creating test cases")
     public void isTestCaseCreated(TestCase testCase) {
         testCasesSteps
@@ -72,12 +72,12 @@ public class TestCasesTest extends Authorization {
                 {testCase1},
                 {testCase2},
                 {testCase3},
-                {testCase4},
-                {testCase5}
+                {testCase4}
+               // {testCase5}
         };
     }
 
-    @TestRail(testCaseID = {14})
+    @TestRail(testCaseID = {9})
     @Test(description = "Delete test case")
     public void isTestCaseDeleted() {
         testCasesSteps
@@ -88,7 +88,7 @@ public class TestCasesTest extends Authorization {
                 .validateIsTestCaseDeleted(testCase1);
     }
 
-    @TestRail(testCaseID = {15})
+    @TestRail(testCaseID = {8})
     @Test(description = "Update test case")
     public void isTestCaseUpdated() {
         testCasesSteps
